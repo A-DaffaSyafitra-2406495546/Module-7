@@ -53,14 +53,6 @@ Produces: 20,000 students · 10 courses · 40,000 student-course relations.
 - `/all-student-name` lambat (~1.8 detik) karena load full entity padahal hanya butuh nama, ditambah string concatenation `+=` dalam loop (O(n²)).
 - `/highest-gpa` cepat (~77ms) karena hanya satu record, meski tetap load seluruh 20K students ke memori dulu.
 
-### JMeter Screenshots
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_1 (/all-student) baseline -->
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_2 (/all-student-name) baseline -->
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_3 (/highest-gpa) baseline -->
-
 ---
 
 ## Performance Testing - After Optimization
@@ -82,14 +74,6 @@ Produces: 20,000 students · 10 courses · 40,000 student-course relations.
 | `/all-student` | 10 | 77,034 | 76,577 | 77,372 | 77,063 | 0.13 | 0.00% |
 | `/all-student-name` | 10 | 1,589 | 1,379 | 1,728 | 1,608 | 4.49 | 0.00% |
 | `/highest-gpa` | 10 | 76 | 68 | 122 | 72 | 10.85 | 0.00% |
-
-### JMeter Screenshots
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_1 (/all-student) optimized -->
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_2 (/all-student-name) optimized -->
-
-<!-- SCREENSHOT: JMeter Summary Report untuk test_plan_3 (/highest-gpa) optimized -->
 
 ---
 
